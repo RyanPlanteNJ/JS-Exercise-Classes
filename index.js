@@ -142,13 +142,20 @@ class Instructor extends Lambdasian{
     this.specialty = obj.specialty;
     this.favLanguage = obj.favLanguage;
     this.catchPhrase = obj.catchPhrase;
-  }
+  } 
   demo(subject){
     return `Today we are learning about ${subject}`;
   }
   grade(obj, subject){
     return `${obj.name} receives a perfect score in ${subject}`;
   }
+
+  pass(obj){
+    let random = (Math.floor(Math.random() * (100 - -100 + 1) )+ -100);
+    return random + obj.grade;
+  }
+  
+
 }
 
 /*
@@ -186,6 +193,14 @@ class Student extends Lambdasian{
   sprintChallenge(subject){
     return `${this.name} has begun spring challenge on ${subject}`
   }
+  graduate(obj){
+    if (obj.grade >= 70){
+        return `You passed!!!`;
+    }else{
+      return `Keep working! You're grade is ${obj.grade}.`
+    }
+  }
+   
 }
 
 /*
