@@ -172,7 +172,7 @@ class Instructor extends Lambdasian{
 */
 class Student extends Lambdasian{
   constructor(obj){
-    super(objasdf);
+    super(obj);
     this.previousBackground = obj.previousBackground;
     this.className = obj.className;
     this.favSubjects = obj.favSubjects;
